@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  collectd:
+    image: hsmtkk/graphite_stack/collectd:latest
+  carbon-relay-ng:
+    image: hsmtkk/graphite_stack/carbon-relay-ng:latest
+  graphite:
+    image: graphiteapp/graphite-statsd:1.1.7-9
+  grafana:
+    image: grafana/grafana:7.4.0
+  graphite-exporter:
+    image: prom/graphite-exporter:v0.9.0
+  prometheus:
+    image: prom/prometheus:v2.24.1
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor:v0.38.7
